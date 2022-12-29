@@ -1,0 +1,15 @@
+{
+    "name":"Vinay Dangodra",
+    "Bio": "I'm a BCA student at Tilak Maharashtra University, Kirandevi Saraf college. A beginer software developer seeking",
+    "Skills" : {
+        "HTML":90,
+        "CSS":70,
+        "JavaScript":50,
+        "Git":50
+    },
+
+    "Education":{
+        "SSC":["Infant Jesus School", "2018-19"],
+        "HSC":["BSGD Junior College", "2020-21"]
+    }
+}

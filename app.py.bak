@@ -1,0 +1,94 @@
+from flask import Flask, render_template, request
+from datetime import datetime
+from flask_mail import Mail,Message
+import json
+from datetime import date
+import pandas as pd
+import webbrowser as wb
+
+app = Flask(__name__)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = "vinaydangodra841@gmail.com"
+app.config['MAIL_PASSWORD'] = '@All8652410990'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
+
+def doEntry(name, email, message):
+    with open('contacts.json') as json_file:
+            data = json.load(json_file)
+            sno = data['sno']
+            names = data['name']
+            emails = data['email']
+            messages = data['message']
+            newsno = sno[-1] +1
+            sno.append(newsno)
+            names.append(name)
+            emails.append(email)
+            messages.append(message)
+
+            newdict = {
+                "sno":sno,
+                "name":names,
+                "email":emails,
+                "message":messages,
+            }
+            json_object = json.dumps(newdict, indent = 4)
+            with open("contacts.json", "w") as json_file_final:
+                json_file_final.write(json_object)
+                print(json_file_final)
+    
+
+
+
+
+
+
+
+
+@app.route("/", methods=['GET', 'POST'])
+def hello_world():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        msg = request.form['message']
+        doEntry(name, email, msg)
+        subject = "message from dvinay"
+        message = Message(subject, sender="vinaydangodra841@gmail.com", recipients=["vinaydangodra28@gmail.com"])
+        message.body = f"Someone filled your contact form\nName: {name}\nEmail: {email}\nMessage: {msg}"
+        mail.send(message)
+    return render_template('index.html', name="Vinay Dangodra")
+
+
+
+@app.route("/database")
+def table():
+    with open('contacts.json') as json_file:
+        data_dic = json.load(json_file)
+        columns = ['sno', 'name', 'email', 'message']
+        index = data_dic['sno']
+        df = pd.DataFrame(data_dic, columns=columns, index=index)
+        table = df.to_html(index=False)
+        return render_template('formsubmissions.html', table=table) 
+
+@app.route("/posts")
+def posts():
+    return render_template('posts.html')
+
+
+@app.route("/admin")
+def admin():
+    password="@All8652410990"
+    return render_template('admin.html', password=password)
+
+
+
+
+
+if __name__ == '__main__':
+    
+    wb.open_new('http://localhost:9990')
+    app.run(port="9990")
+     

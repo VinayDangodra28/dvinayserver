@@ -1,0 +1,106 @@
+@media screen and (max-width: 600px){
+	.main{
+		margin: 0%;
+		padding: 0%;
+	}
+
+.my-image{
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -10%;
+    padding: -5px;
+}
+.my-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: solid 3px white;
+    box-shadow: 0px 0px 4px 2px white;
+}
+.my-image img:hover{
+    box-shadow: 0px 0px 4px 8px orange;
+}
+	
+#body-header{
+	height: 50vh;
+    z-index: 5	;
+}
+.nav-button{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 2;
+}
+#body-header{
+	height: 50vh;
+}
+.nav-button > button{
+	height: auto;
+	width: auto;
+}
+.nav-button > button > img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+	.nav-h{
+		overflow: hidden;
+		z-index: 1;
+		background-color: black;
+		transition: all 1s ease-in-out;
+	}
+	.close{
+		width: 0%;
+	}
+	.open{
+		width: 80%;
+	}
+	/*Education and work experience */
+	.timeline-divider{
+		left: 8%;
+	}
+	.timeline-box{
+	left: 12%;
+	width: 80%;
+	}
+	.timeline-box:nth-child(2n){
+		left: 12%;
+	}
+	.timeline-box::after{
+		left: -6%;
+	}
+	.timeline-box:nth-child(2n)::after{
+		left: -6%;
+	}
+	.contact-form{
+	width: 200px;
+	}
+	#my-details-container {
+	width: 275px;
+	}
+	#contact-form-container{
+	width: 275px;
+	} 
+	#contact-form{
+	margin-left: 5%;
+	}
+	#contact-form button[type="submit"] {
+	 margin-left: 5%;
+	}
+	.section-heading{
+	font-size: 30px;
+	}
+	.contact-heading{
+	font-size: 20px;
+	}
+	#body-header{
+	height: 45vh;
+	}
+	.port-description:hover{
+	font-size: 25px;
+	}
+}

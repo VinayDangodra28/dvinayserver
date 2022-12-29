@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dvinay</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="author" content="Vinay Dangodra">
+    <meta name="description" content="Vinay Dangodra's resume">
+    <meta name="robot" content="INDEX FOLLOW">
+    <meta name="keywords" content="vinay dangodra">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static' , filename='images/me.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/responsive.css') }}">
+    <script src="https://kit.fontawesome.com/6efeed08c0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+
+        <!-- nav bar -->
+        <nav class="nav-h close" id="nav-h">
+            <div class="nav-image-h">
+                <img src="{{ url_for('static' , filename='images/me.jpg') }}" alt="author image" class="nav-img-h">
+            </div>
+            <div class="nav-name-h">
+                Vinay Dangodra
+            </div>
+            <div class="nav-social-h">
+                <ul class="horizontal-list textcenter social-icons nodec-list">
+                    <li><a href="https://www.linkedin.com/in/vinay-dangodra-4420461ba" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li><a href="https://instagram.com/_vinay_dangodra?igshid=3fo8xbifm76y" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a></li>
+                <li><a href="mailto:vinaydangodra28@gmail.com" target="_blank">
+                        <i class="far fa-envelope"></i>
+                    </a></li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=+917900108153&text=&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/VinayDangodra28" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <ul class="nodec-list-h nav-list-h">
+                <li class="nodec-h nav-listitem-h">
+                    <button onclick="myFunction()" style="background-color: rgba(240, 248, 255, 0); border: 0px; font-size: 1.5rem;"> 
+                        <a href="#" class="nodec-h white-h">Home</a>
+                    </button>
+                </li>
+                <li class="nodec-h nav-listitem-h">
+                    
+                    <button onclick="myFunction()" style="background-color: rgba(240, 248, 255, 0); border: 0px; font-size: 1.5rem;"> 
+                        <a href="#about" class="nodec-h white-h">About</a>
+                    </button>
+                </li>
+                <li class="nodec-h nav-listitem-h">
+                    
+                    <button onclick="myFunction()" style="background-color: rgba(240, 248, 255, 0); border: 0px; font-size: 1.5rem;"> 
+                        <a href="#contact" class="nodec-h white-h">Contact</a>
+                    </button>
+                </li>
+                <li class="nodec-h nav-listitem-h">
+                    
+                    <button onclick="myFunction()" style="background-color: rgba(240, 248, 255, 0); border: 0px; font-size: 1.5rem;"> 
+                        <a href="/posts" class="nodec-h white-h">Posts</a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ending -->
+    <!-- main starting -->
+    <div class="nav-button">
+        <button onclick="myFunction()">
+            <img src="{{ url_for('static' , filename='images/lines.jpeg') }}" alt="" id="nav-button">
+        </button>
+    </div>
+    <div class="main">
+        
+        <header id="body-header">
+
+    
+            <section id="navigation" class="textcenter">
+                <div id="name-social-container">
+                    <div class="textcenter">
+                        <h1 id="my-name">
+                            <a class="nodec white name-head"
+                                href="https://www.google.com/search?q=vinay+dangodra&source=hp&ei=zn6aYKm6KYye9QOduarABw&iflsig=AINFCbYAAAAAYJqM3uaoxnGnXRT2cL_OgvhETLyt6YUg&oq=vinay+dangodra&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgAToICAAQ6gIQjwE6AggAOgUIABCxAzoFCC4QsQM6CwguELEDEMcBEKMCOggIABCxAxCDAToICC4QsQMQgwE6CwguELEDEIMBEJMCOgIILjoICC4QxwEQrwE6BQguEJMCOgQIABAKOgQIABANOggIABANEAUQHjoICAAQCBANEB46BggAEBYQHjoICAAQFhAKEB46AggmOgYIABANEB46CggAEAgQDRAKEB46BwghEAoQoAFQ3gxY7JIBYOiwAWgIcAB4A4ABjhqIAeTiAZIBCzUtMi42LjkuNC4ymAEAoAEBqgEHZ3dzLXdperABCg&sclient=gws-wiz&ved=0ahUKEwip2bTL1sHwAhUMT30KHZ2cCngQ4dUDCAY&uact=5">
+                                &lt;Vinay Dangodra&gt;
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </section>
+        </header> 
+        <!--about starts here-->
+        <section id="about" class="text-center">
+            <div class="my-image">
+                <a href="{{ url_for('static' , filename='images/me.jpg') }}" class="nodec">
+                <img src="{{ url_for('static' , filename='images/me.jpg') }}" alt="" class="my-photo">
+                </a>
+            </div>
+            <div class="about-text">
+                <p>
+                    I'm a BCA student at Tilak Maharashtra University, Kirandevi Saraf college.
+                    A beginer software developer seeking 
+                </p>
+            </div>
+        </section>
+        <!--skills section starts-->
+        <section id="skills" class="text-center">
+            <div class="section-heading">
+                <span><i class="fas fa-chalkboard-teacher"></i></span>
+                <span>
+                    <h2>SKILLS</h2>
+                </span>
+            </div>
+            <div class="skills-show">
+                <div class="skill">
+                    <div class="html progress">
+                        <span>HTML</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="css progress">
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="javascript progress">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="git progress">
+                        <span>Git&amp;Github</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--work experience section starts here-->
+        <!-- education starts here -->
+        <section id="education" class="text-center">
+            <div class="section-heading">
+                <span><i class="fas fa-graduation-cap"></i></span>
+                <span>
+                    <h2>EDUCATION</h2>
+                </span>
+            </div>
+            <div class="timeline">
+                <div class="timeline-box">
+
+                    <div class="box-heading">
+                        <div class="box-hhh">
+                            <div class="box-h">SSC</div>
+                            <div class="box-company-name">Infant Jesus School</div>
+                            <div class="box-date">2018-2019</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="timeline-box">
+
+                    <div class="box-heading">
+                        <div class="box-hhh">
+                            <div class="box-h">HSC -commerce</div>
+                            <div class="box-company-name">BSGD Junior college</div>
+                            <div class="box-date">2020-2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-divider">
+                    <div class="timeline-traveller">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--certificate section starts here-->
+        <section id="certificates" class="certificates">
+
+            <div class="section-heading textenter certificate-font">
+                <span><i class="fas fa-th-list"></i></span>
+                <span>
+                    <h2>Certificates</h2>
+                </span>
+            </div>
+            <div class="portfolio-container">
+                <div class="cert-box cert-1">
+                    <div class="cert-main">
+                        HTML certificate<br>-from Sololearn
+                        <a href="{{ url_for('static' , filename='images/HTML_certificate.jpg') }}"><img src="{{ url_for('static' , filename='images/HTML_certificate.jpg') }}" class="certificate-img"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact starts here-->
+        <section id="contact">
+            <div class="contact-heading textenter" id="contact-heading">
+                <span><i class="far fa-address-card"></i></span>
+                <span>
+                    <h2>Contact Me</h2>
+                </span>
+            </div>
+
+            <div id="contact-container">
+
+                <div id="contact-form-container">
+                    <form id="contact-form" method="POST" action="/">
+                        <input id="input-name" name="name" type="text" placeholder="Your Name">
+                        <input id="input-email" name="email" type="text" required placeholder="Your Email">
+                        <textarea id="input-message" name="message" rows="2" cols=40
+                            placeholder="Message"></textarea>
+                        <button class="sub-btn" type="submit">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div id="my-details-container">
+
+                    <h3> Get In touch </h3>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Vasai Virar, India</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>7900108153</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="far fa-envelope"></i>
+                        <span class="flexy">vinaydagodra28@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="textcenter">
+                <ul class="horizontal-list textcenter social-icons bottom-social">
+                    <li><a href="https://www.linkedin.com/in/vinay-dangodra-4420461ba" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li><a href="https://instagram.com/_vinay_dangodra?igshid=3fo8xbifm76y" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a></li>
+                    <li><a href="mailto:vinaydangodra28@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i>
+                        </a></li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=+917900108153&text=&app_absent=0" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/VinayDangodra28" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- javascript -->
+    <script src="{{ url_for('static' , filename='js/main.js') }}">
+        
+    </script>
+</body>
+
+</html>
